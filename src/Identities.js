@@ -18,7 +18,7 @@ export const identityy = [
 	{
 		id: 3,
 		name: 'Monkey D Luffy',
-		username: 'PirateKing',
+		username: 'KaizokuO',
 		email: 'asluffy@gmail.com',
 		img: 'https://robohash.org/thin?set=set5'
 
