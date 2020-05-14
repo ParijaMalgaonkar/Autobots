@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CardList from './CardList.js'
+import App from './App.js'
 import * as serviceWorker from './serviceWorker'; 
 import 'tachyons';
 import {identityy} from './Identities.js';
 
 ReactDOM.render(
   <React.StrictMode>
-  	<CardList identityy={identityy}/>
+  	<App />
   </React.StrictMode>, document.getElementById('root')
 );
 
