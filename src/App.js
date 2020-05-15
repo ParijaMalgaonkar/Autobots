@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CardList from './CardList.js';
 import Searchbox from './Searchbox'
 import {identityy} from './Identities.js';
+import './App.css'
 
 
 class App extends Component  {
@@ -21,7 +22,7 @@ class App extends Component  {
 		})
 		return (
 			<div className = 'tc'>
-				<h1> Autobots </h1>
+				<h1 className='f1'> Autobots </h1>
 				<Searchbox searchChange = {this.onSearchChange}/>
 				<CardList identityy={filtered}/>
 			</div>
