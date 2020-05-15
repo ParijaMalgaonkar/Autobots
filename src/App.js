@@ -3,11 +3,6 @@ import CardList from './CardList.js';
 import Searchbox from './Searchbox'
 import {identityy} from './Identities.js';
 
-const state = {
-
-}  
-
-
 
 class App extends Component  {
 	constructor() {
