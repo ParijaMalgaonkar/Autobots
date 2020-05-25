@@ -1,18 +1,18 @@
 import React from 'react';
 import Card from './Card.js';
 
-const CardList =({identityy}) => {
+const CardList =({identity}) => {
 	return (  
 		<div>
 			{
-				identityy.map((user, i) => {
+				identity.map((user, i) => {
 					return (
 						< Card 
 						key={i} 
-						id={identityy[i].id} 
-						name={identityy[i].name} 
-						email={identityy[i].email} 
-						img={identityy[i].img} />
+						id={identity[i].id} 
+						name={identity[i].name} 
+						email={identity[i].email} 
+						img={identity[i].img} />
 					);
 				})
 			}

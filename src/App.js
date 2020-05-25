@@ -1,32 +1,43 @@
 import React, {Component} from 'react';
 import CardList from './CardList.js';
 import Searchbox from './Searchbox'
-import {identityy} from './Identities.js';
-import './App.css'
+import Scroll from './Scroll'
+import './App.css';
 
 
 class App extends Component  {
 	constructor() {
 		super()
 		this.state = {
-			identityy : identityy,
+			identity : [],
 			searchfield : ''
 		}
 	}
+
+	componentDidMount() {
+		fetch('https://jsonplaceholder.typicode.com/users')
+		.then(response=> response.json())
+		.then(users=> this.setState({identity: users}));
+	}
+
 	onSearchChange = (event) => {
 		this.setState({searchfield: event.target.value});
 	}
 	render() {
-			const filtered = this.state.identityy.filter(identityy => {
-			return identityy.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+			const filterIdentity = this.state.identity.filter(identity => {
+			return identity.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
 		})
 		return (
 			<div className = 'tc'>
 				<h1 className='f1'> Autobots </h1>
 				<Searchbox searchChange = {this.onSearchChange}/>
-				<CardList identityy={filtered}/>
+				<Scroll>
+					<CardList identity={filterIdentity}/>
+				</Scroll>
 			</div>
 		);
 	}
 }
 export default App;
+
+

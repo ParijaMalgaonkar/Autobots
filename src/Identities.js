@@ -1,4 +1,4 @@
-export const identityy = [
+export const identity = [
 	{
 		id: 1,
 		name: 'Parija Malgaonkar',
