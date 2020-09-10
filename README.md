@@ -1,5 +1,5 @@
 ## Autobots
-This is project is a template for contact cards made using create-react-app
+This is project is a template for dynamic contact cards made using create-react-app, using a placeholder API.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
